@@ -32,13 +32,52 @@ function getAddress() {
 <td><img src="pizza.png" width="120" align="left" hspace="15"></td>
 <td><h1>Сделать заказ:</h1></td>
 </tr>
-</table>
-<form action="coffe.jsp" method="get">
-<p>Телефон: <input type="text" id="phone"
-name="phone" onchange=" getAddress()"/> </p>
-<p>Заказ: <textarea rows="5" name="order" id="order"></textarea></p>
-<p>Адрес: <textarea rows="5" id="address"
-name="address"></textarea></p>
-<input type="submit" value="Заказать"><br>
-</form>
-</body>
+</table><!doctype html>
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+		<title> ~~~ </title>
+		<script type="text/javascript">
+		function print1(){
+		var text = "";
+		for( var i=0; i<=10;i++){
+		text = text + i + "; ";
+		}
+		 alert(text);	
+		}
+		
+		function print2(){
+		var text = "";
+		for( var i=0; i<=20;i=i+2){
+		text = text + i + "; ";
+		}
+		 alert(text);	
+		}
+		
+		function print3(){
+		var text = "";
+		for( var i=1; i<=20;i=i+2){
+		text = text + i + "; ";
+		}
+		 alert(text);	
+		}
+		
+		function check(){
+		if(document.getElementById("a").checked){
+			document.getElementById("y").onclick = print1;
+		} else if (document.getElementById("b").checked){
+			document.getElementById("y").onclick = print2;
+		} else if (document.getElementById("c").checked){
+			document.getElementById("y").onclick = print3;
+		} 
+		
+	}
+	</script>
+	</head>
+	<body>
+		<p><input type="radio" name="r" id="a" onclick="check()" /> Целые числа от 0 до 10</p> 
+		<p><input type="radio" name="r" id="b" onclick="check()" /> Четные числа от 0 до 20</p>
+		<p><input type="radio" name="r" id="c" onclick="check()" /> Нечетные числа от 0 до 20</p> 
+		<input type="button" id="y" value="вывести"/>
+	</body> 
+</html>
